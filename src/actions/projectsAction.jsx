@@ -113,27 +113,28 @@ const getEditProject = project => ({
     payload: project
 })
 
-export function editProjectAction(product) {
+export function editProjectAction(project) {
     return async (dispatch) => {
         dispatch( editProject() )
 
         try {
-            await clientAxios.put(`/productos/${product.id}`, product)
-            dispatch( editProjectSuccess(product) )
+            await clientAxios.put(`/projects/${project.id}`, project)
+            dispatch( editProjectSuccess(project) )
 
         } catch (error) {
-            
+            dispatch( editProjectError() )
+            console.log(error)
         }
     }
 }
 
-const editProject = project => ({
+const editProject = () => ({
     type: EDIT_PROJECT
 })
 
-const editProjectSuccess = product => ({
+const editProjectSuccess = project => ({
     type: EDIT_PROJECT_SUCCESS,
-    payload: product
+    payload: project
 })
 
 const editProjectError = () => ({

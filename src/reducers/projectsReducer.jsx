@@ -9,7 +9,6 @@ import {
     DELETE_PROJECT_SUCCESS,
     DELETE_PROJECT_ERROR,
     GET_PROJECT_EDIT,
-    EDIT_PROJECT,
     EDIT_PROJECT_SUCCESS,
     EDIT_PROJECT_ERROR
 } from '../types'
@@ -77,7 +76,7 @@ export default function( state = initialState, action ) {
         case EDIT_PROJECT_SUCCESS:
             return {
                 ...state,
-                products: state.products.map( product => product.id === action.payload.id ? product = action.payload : product )
+                projects: state.projects.map( project => project.id === action.payload.id ? project = action.payload : project )
             }
 
         default:
