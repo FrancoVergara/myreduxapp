@@ -53,7 +53,7 @@ export default function( state = initialState, action ) {
         case CREATE_PROJECT_SUCCESS:
             return {
                 ...state,
-                newproject: [],
+                projects: [...state.projects, state.newproject],
                 loading: null
             }
         case DELETE_PROJECT:

@@ -16,6 +16,7 @@ const Projects = () => {
     useEffect( () => {
         const loadProjects = () => dispatch( getProjectsAction() )
         loadProjects()
+        // eslint-disable-next-line
     }, [])
 
     return (
