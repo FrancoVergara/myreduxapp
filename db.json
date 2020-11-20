@@ -1,0 +1,20 @@
+{
+    "projects": [
+      {
+        "name": "WeatherApp",
+        "description": "Aplicacion hecha con React",
+        "category": "Vista del tiempo",
+        "year": "2019",
+        "languages": "JavaScript, React",
+        "id": 1
+      },
+      {
+        "name": "YourLaunch",
+        "description": "App para subir fotos de comida",
+        "category": "Blog",
+        "year": "2017",
+        "languages": "PHP, Laravel",
+        "id": 2
+      }
+    ]
+  }
